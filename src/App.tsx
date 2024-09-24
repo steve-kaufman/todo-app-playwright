@@ -49,11 +49,18 @@ function App() {
                   <h3 className="todo-item-name">{todo.name}</h3>
                   <p className="todo-item-desc">{todo.description}</p>
                 </div>
-                <input
-                  type="checkbox"
-                  checked={todo.isComplete}
-                  onChange={toggleTodo(i)}
-                />
+                <label
+                  className={`todo-complete ${
+                    todo.isComplete ? "done" : "not-done"
+                  }`}
+                >
+                  <p>{todo.isComplete ? "done" : "not done"}</p>
+                  <input
+                    type="checkbox"
+                    checked={todo.isComplete}
+                    onChange={toggleTodo(i)}
+                  />
+                </label>
               </li>
             ))}
           </ol>

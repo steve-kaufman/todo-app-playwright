@@ -54,3 +54,24 @@
   padding: 0.5rem;
   border-top: 1px solid gray;
 }
+
+.todo-complete {
+  display: flex;
+  align-items: center;
+}
+
+.todo-complete p {
+  font-style: italic;
+}
+
+.todo-complete.done p {
+  color: green;
+}
+
+.todo-complete.not-done p {
+  color: rgb(240, 172, 0);
+}
+
+.todo-complete input {
+  margin-left: 1rem;
+}
