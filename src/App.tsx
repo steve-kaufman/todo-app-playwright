@@ -35,7 +35,7 @@ function App() {
           <h2>Todos</h2>
           <button
             className="add-todo-btn"
-            data-testId="add-todo-btn"
+            data-testid="add-todo-btn"
             onClick={() => setCreatingTodo(true)}
           >
             +
@@ -61,6 +61,7 @@ function App() {
       </main>
       {creatingTodo ? (
         <TodoEditor
+          title="Create Todo"
           todo={{ name: "", description: "", isComplete: false }}
           updateTodo={createTodo}
           cancel={() => setCreatingTodo(false)}

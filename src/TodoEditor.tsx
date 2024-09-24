@@ -3,12 +3,13 @@ import { Todo } from "./App";
 import "./TodoEditor.css";
 
 type Props = {
+  title: string;
   todo: Todo;
   updateTodo: (todo: Todo) => void;
   cancel: () => void;
 };
 
-export function TodoEditor({ todo, updateTodo, cancel }: Props) {
+export function TodoEditor({ title, todo, updateTodo, cancel }: Props) {
   const [name, setName] = useState(todo.name);
   const [description, setDescription] = useState(todo.description);
 
@@ -19,10 +20,13 @@ export function TodoEditor({ todo, updateTodo, cancel }: Props) {
 
   return (
     <section className="todo-editor">
+      <header>
+        <h2>{title}</h2>
+      </header>
       <form className="todo-editor-form" onSubmit={onSubmit}>
         <div className="input-group">
           <label className="input-label">
-            Name
+            <p>Name</p>
             <input
               name="todo-name"
               value={name}
@@ -32,7 +36,7 @@ export function TodoEditor({ todo, updateTodo, cancel }: Props) {
         </div>
         <div className="input-group">
           <label className="input-label">
-            Description
+            <p>Description</p>
             <input
               name="todo-desc"
               value={description}
@@ -40,10 +44,12 @@ export function TodoEditor({ todo, updateTodo, cancel }: Props) {
             />
           </label>
         </div>
-        <button type="button" onClick={cancel}>
-          Cancel
-        </button>
-        <button type="submit">Create</button>
+        <div className="form-buttons">
+          <button type="button" onClick={cancel}>
+            Cancel
+          </button>
+          <button type="submit">Create</button>
+        </div>
       </form>
     </section>
   );
