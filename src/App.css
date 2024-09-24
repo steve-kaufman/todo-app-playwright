@@ -1,0 +1,58 @@
+.page-header {
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  padding: 0 3rem;
+  font-size: 1.5rem;
+  background-color: rgb(32, 32, 32);
+  color: white;
+}
+
+.page-main {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 800px) {
+  .page-main {
+    padding: 1rem 10rem;
+  }
+}
+
+.todos-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.todos-header h2 {
+  font-weight: bold;
+}
+
+.add-todo-btn {
+  text-align: center;
+  width: 2rem;
+  height: 2rem;
+  font-size: 2rem;
+  line-height: 1.5rem;
+  color: rgb(0, 157, 255);
+  border: 2px solid rgb(0, 157, 255);
+  border-radius: 50%;
+}
+
+.todos-main {
+  padding: 0 1rem;
+}
+
+.todos-list {
+  list-style: none;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  border-top: 1px solid gray;
+}
